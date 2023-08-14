@@ -45,7 +45,7 @@ fn custom_panic_hook(info: &PanicInfo<'_>) {
 
     // Give 2 seconds to see the error in case capturing the stack trace fails
     // (capturing the stack trace allocates memory)
-    thread::sleep(Duration::from_secs(2));
+    thread::sleep(Duration::from_secs(100));
 
     // The backtrace is full of "unknown" for some reason
     let backtrace = Backtrace::force_capture();
